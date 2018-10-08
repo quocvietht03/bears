@@ -88,6 +88,7 @@ if (!function_exists('bears_enqueue_scripts')) {
 		/* map 3 */
 		wp_register_script( 'mapv3', get_template_directory_uri().'/assets/vendors/mapv3.js', array('jquery'), '', true);
 		
+		wp_enqueue_style( 'bears-main_style', get_template_directory_uri().'/assets/css/main_style.css',  array(), false );
 		wp_enqueue_style( 'bears-style', get_template_directory_uri().'/style.css',  array(), false );
 		wp_enqueue_script( 'bears-main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), '', true);
 		

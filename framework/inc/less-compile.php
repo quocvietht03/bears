@@ -309,7 +309,7 @@ function bears_addLessStyle() {
 	if(isset($bears_options['less_design'])&&$bears_options['less_design']){
 		try {
 			$inputFile = get_template_directory().'/assets/css/less/style.less';
-			$outputFile = get_template_directory().'/style.css';
+			$outputFile = get_template_directory().'/assets/css/main_style.css';
 			bears_autoCompileLess($inputFile, $outputFile);
 		} catch (Exception $e) {
 			echo 'Caught exception: ', $e->getMessage(), "\n";
