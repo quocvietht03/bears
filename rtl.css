@@ -1,0 +1,222 @@
+/*
+Theme Name: bears
+Theme URI: http://theme.bearsthemes.com/wordpress/bears
+Author: bearsthemes
+Author URI: http://bearsthemes.com
+Version: 1.1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns,left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Description: bears is a fully configurable and easy to use responsive WordPress Theme  with a lot of great features.
+Text Domain: bears
+*/
+@media(min-width: 992px){
+	.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+		float: right;
+	}
+}
+.text-left{
+	text-align: right;
+}
+.text-right{
+	text-align: left;
+}
+.bt-rtl-align{
+	text-align: right !important;
+}
+.owl-carousel{
+	direction: ltr;
+}
+.owl-carousel .owl-item{
+	direction: rtl;
+	text-align: right;
+}
+#site_backtop{
+	left: 30px;
+	right: auto !important;
+}
+.bt-header-v13 .bt-header-desktop .bt-top .widget.widget_icon_info_widget .bt-icon-box .icon,
+.bt-header-v13 .bt-header-desktop .bt-top .widget.widget_social_widget .wg-title{
+	margin-left: 5px;
+	margin-right: 0;
+}
+.bt-header-v13 .bt-header-desktop .bt-top .widget.widget_icon_info_widget .bt-icon-box .text{
+	direction: ltr;
+}
+.bt-header-v13 .bt-header-desktop .bt-top .widget.widget_social_widget .social-wrap a{
+	margin-left: 3px;
+	margin-right: 0;
+}
+.bt-header-v13 .bt-header-desktop .bt-top .widget.widget_social_widget .social-wrap a:first-child{
+	margin-left: 0;
+}
+.bt-header-v13 .bt-header-desktop .bt-top .widget .bt-lang-sel{
+	margin-left: 0;
+	margin-right: 30px;
+}
+.bt-header-v13 .bt-header-desktop .bt-top .widget .bt-lang-sel::before{
+	left: auto;
+	right: 0;
+}
+.bt-header-v13 .bt-header-desktop .bt-top .widget .bt-lang-sel > li > a::after{
+	margin-left: 0;
+	margin-right: 5px;
+}
+.bt-footer.bt-footer-v13 .bt-footer-top .widget .newsletter::after{
+	content: "\f053";
+	left: 20px;
+	right: auto;
+}
+.bt-footer.bt-footer-v13 .bt-footer-top .widget .newsletter input.tnp-email{
+	font-size: 20px;
+	padding: 10px 30px 10px 70px;
+}
+.bt-blog-carousel-element.layout12 .bt-item .bt-content .bt-term i,
+.bt-blog-carousel-element.layout12 .bt-item .bt-content .bt-meta li{
+	font-size: 14px;
+	font-weight: 400;
+}
+.bt-blog-carousel-element.layout12 .bt-item .bt-content .bt-meta li i{
+	margin-left: 5px;
+	margin-right: 0;
+}
+
+body select {
+	background-position: center left 10px;
+}
+.wpcf7-form input, .wpcf7-form select, .wpcf7-form textarea{
+	text-align: right;
+}
+.bt-get-consultation-section .wpcf7-form .bt-row-1 .bt-col, .bt-get-consultation-section .wpcf7-form .bt-row-2 .bt-col,
+.bt-contact-form-section .row > div{
+	float: right;
+}
+.single-post .bt-post-item .bt-term i,
+.single-post .bt-post-item .bt-meta > li i,
+.blog .bt-post-item .bt-term i, .archive .bt-post-item .bt-term i, .search .bt-post-item .bt-term i,
+.blog .bt-post-item .bt-meta > li i, .archive .bt-post-item .bt-meta > li i, .search .bt-post-item .bt-meta > li i{
+	font-size: 14px;
+	margin-left: 5px;
+	margin-right: 0;
+}
+.comment-respond .comment-form .form-submit .submit,
+.comment-respond .comment-form .comment-form-comment textarea, .comment-respond .comment-form .comment-form-author input, .comment-respond .comment-form .comment-form-email input, .comment-respond .comment-form .comment-form-url input,
+.single-post .bt-blog-article-nav .bt-prev, .single-post .bt-blog-article-nav .bt-next,
+.single-post .bt-tag-share .bt-tag a,
+.single-post .bt-post-item .bt-meta > li,
+.blog .bt-post-item .bt-meta > li, .archive .bt-post-item .bt-meta > li, .search .bt-post-item .bt-meta > li{
+	font-size: 20px;
+}
+.single-post .bt-blog-article-nav .bt-prev a, .single-post .bt-blog-article-nav .bt-next a{
+	font-size: 24px;
+}
+.comment-respond .comment-reply-title span{
+	font-size: 28px;
+}
+.bt-left-sidebar .widget .wg-title, .bt-left-sidebar .widget .widgettitle, .bt-right-sidebar .widget .wg-title, .bt-right-sidebar .widget .widgettitle{
+	font-size: 30px;
+}
+.bt-left-sidebar .widget .wg-title::after, .bt-left-sidebar .widget .widgettitle::after, .bt-right-sidebar .widget .wg-title::after, .bt-right-sidebar .widget .widgettitle::after{
+	left: auto;
+	right: 0;
+}
+.bt-left-sidebar .widget.widget_search .search-form .search-field, .bt-right-sidebar .widget.widget_search .search-form .search-field{
+	padding: 12px 15px 12px 55px;
+}
+.bt-left-sidebar .widget.widget_search .search-form::before, .bt-right-sidebar .widget.widget_search .search-form::before{
+	left: 15px;
+	right: auto;
+}
+.bt-left-sidebar .widget.widget_archive > ul > li, .bt-left-sidebar .widget.widget_archive .menu-testing-menu-container > ul > li, .bt-left-sidebar .widget.widget_categories > ul > li, .bt-left-sidebar .widget.widget_categories .menu-testing-menu-container > ul > li, .bt-left-sidebar .widget.widget_pages > ul > li, .bt-left-sidebar .widget.widget_pages .menu-testing-menu-container > ul > li, .bt-left-sidebar .widget.widget_meta > ul > li, .bt-left-sidebar .widget.widget_meta .menu-testing-menu-container > ul > li, .bt-left-sidebar .widget.widget_nav_menu > ul > li, .bt-left-sidebar .widget.widget_nav_menu .menu-testing-menu-container > ul > li, .bt-right-sidebar .widget.widget_archive > ul > li, .bt-right-sidebar .widget.widget_archive .menu-testing-menu-container > ul > li, .bt-right-sidebar .widget.widget_categories > ul > li, .bt-right-sidebar .widget.widget_categories .menu-testing-menu-container > ul > li, .bt-right-sidebar .widget.widget_pages > ul > li, .bt-right-sidebar .widget.widget_pages .menu-testing-menu-container > ul > li, .bt-right-sidebar .widget.widget_meta > ul > li, .bt-right-sidebar .widget.widget_meta .menu-testing-menu-container > ul > li, .bt-right-sidebar .widget.widget_nav_menu > ul > li, .bt-right-sidebar .widget.widget_nav_menu .menu-testing-menu-container > ul > li{
+	border-left: none;
+	border-right: 5px solid transparent;
+    border-right-color: transparent;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.bt-left-sidebar .widget.widget_bears_post_list.layout1 .bt-post-list > li .bt-thumb, .bt-right-sidebar .widget.widget_bears_post_list.layout1 .bt-post-list > li .bt-thumb{
+	float: right;
+}
+.bt-left-sidebar .widget.widget_bears_post_list.layout1 .bt-post-list > li .bt-content, .bt-right-sidebar .widget.widget_bears_post_list.layout1 .bt-post-list > li .bt-content{
+	padding-left: 0;
+	padding-right: 85px;
+}
+.bt-left-sidebar .widget.widget_bears_post_list.layout1 .bt-post-list > li .bt-content .bt-date, .bt-right-sidebar .widget.widget_bears_post_list.layout1 .bt-post-list > li .bt-content .bt-date{
+	font-size: 18px;
+}
+.bt-left-sidebar .widget.widget_bears_post_list.layout1 .bt-post-list > li .bt-content .bt-title, .bt-right-sidebar .widget.widget_bears_post_list.layout1 .bt-post-list > li .bt-content .bt-title{
+	font-size: 20px;
+}
+
+
+.bt-left-sidebar .widget.widget_bears_post_list.layout1 .bt-post-list > li .bt-content .bt-date::before, .bt-right-sidebar .widget.widget_bears_post_list.layout1 .bt-post-list > li .bt-content .bt-date::before{
+	float: right;
+	margin-left: 5px;
+	margin-right: 0;
+	font-size: 14px;
+}
+.bt-left-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-desc, .bt-right-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-desc{
+	padding-left: 0;
+	padding-right: 30px;
+}
+.bt-left-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-desc::before, .bt-right-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-desc::before{
+	left: auto;
+	right: 10px;
+}
+.bt-left-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-desc i.fa.fa-quote-left, .bt-right-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-desc i.fa.fa-quote-left{
+	top: auto;
+	bottom: 0;
+	left: 0;
+	right: auto;
+}
+.bt-left-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-desc i.fa.fa-quote-right, .bt-right-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-desc i.fa.fa-quote-right{
+	top: 0;
+	bottom: auto;
+	right: 0;
+}
+.bt-left-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-info, .bt-right-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-info{
+	padding-left: 0;
+	padding-right: 105px;
+}
+.bt-left-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-info img, .bt-right-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-info img{
+	left: auto;
+	right: 30px;
+}
+.bt-left-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-info .bt-position, .bt-right-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-info .bt-position{
+	font-size: 18px;
+}
+.bt-left-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-info .bt-title, .bt-right-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .bt-item .bt-info .bt-title{
+	font-size: 24px;
+}
+.bt-left-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .owl-nav, .bt-right-sidebar .widget.widget_bears_testimonial_slider .bt-testimonial-slider .owl-nav{
+	left: 0;
+	right: auto; 
+}
+.single-fw-portfolio .fw-portfolio.default .bt-term a, .single-fw-portfolio .fw-portfolio.layout1 .bt-term a, .single-fw-portfolio .fw-portfolio.layout2 .bt-term a{
+	font-style: normal;
+}
+.single-fw-portfolio .bt-related > .bt-title::after,
+.single-fw-portfolio .fw-portfolio.default .bt-info h4::after, .single-fw-portfolio .fw-portfolio.default .bt-social h4::after, .single-fw-portfolio .fw-portfolio.layout1 .bt-info h4::after, .single-fw-portfolio .fw-portfolio.layout1 .bt-social h4::after, .single-fw-portfolio .fw-portfolio.layout2 .bt-info h4::after, .single-fw-portfolio .fw-portfolio.layout2 .bt-social h4::after,
+.single-fw-portfolio .fw-portfolio.default .bt-term::after, .single-fw-portfolio .fw-portfolio.layout1 .bt-term::after, .single-fw-portfolio .fw-portfolio.layout2 .bt-term::after{
+	left:auto;
+	right: 0;
+}
+.single-fw-portfolio .fw-portfolio.default .bt-info h4, .single-fw-portfolio .fw-portfolio.default .bt-social h4, .single-fw-portfolio .fw-portfolio.layout1 .bt-info h4, .single-fw-portfolio .fw-portfolio.layout1 .bt-social h4, .single-fw-portfolio .fw-portfolio.layout2 .bt-info h4, .single-fw-portfolio .fw-portfolio.layout2 .bt-social h4{
+	font-size: 30px;
+}
+.single-fw-portfolio .bt-related .bt-item .bt-overlay .bt-content .bt-title{
+	font-size: 24px;
+}
+.single-fw-portfolio .bt-related .bt-item .bt-overlay .bt-content .bt-term{
+	font-size: 18px;
+	font-style: normal;
+}
+.single-bt_services article .bt-header .bt-icon{
+	margin: 0 0 15px 30px;
+}
+.single-bt_services article .bt-header .bt-content .bt-term{
+	font-size: 20px;
+}
+.bt-sidebar .bt-call-to-action-box a{
+	font-size: 20px;
+}

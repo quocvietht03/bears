@@ -1,0 +1,166 @@
+.bt-button-element-style1{
+	.bt-button-element > a{
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 28px;
+		color: #ffffff;
+		background: @main-color;
+		padding: 10px 30px;
+		-webkit-box-shadow: 5px 0 35px fadeout(#000000, 91);
+		-ms-box-shadow: 5px 0 35px fadeout(#000000, 91);
+		box-shadow: 5px 0 35px fadeout(#000000, 91);
+		&:hover{
+			background: darken(@main-color, 10);
+		}
+	}
+}
+
+.bt-featured-section{
+	.aio-icon-header + .aio-icon-description{
+		margin-top: 0;
+	}
+	.aio-icon-description h4{
+		margin-bottom: 5px;
+	}
+}
+.bt-funfacts-section{
+	.stats-block, .wpb_row .wpb_column .wpb_wrapper .stats-block{
+		display: inline-block;
+		vertical-align: top;
+		width: 20%;
+		
+	}
+}
+.bt-get-consultation-section{
+	.vc_row{
+		max-width: 1360px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.wpcf7-form{
+		.wpcf7-response-output{
+			color: #ffffff;
+		}
+		.wpcf7-form-control-wrap{
+			display: block;
+			margin-bottom: 10px;
+		}
+		.bt-row-1, .bt-row-2{
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+		.bt-row-1, .bt-row-2{
+			&:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.bt-col{
+				float: left;
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+		}
+		.bt-row-1 .bt-col{
+			&:first-child{
+				width: 60%;
+			}
+			&:last-child{
+				width: 40%;
+			}
+		}
+		.bt-row-2 .bt-col{
+			width: 40%;
+			&:first-child{
+				width: 40%;
+			}
+			&:last-child{
+				width: 20%;
+			}
+		}
+		input, select{
+			font-size: 20px;
+			line-height: 24px;
+			color: #444444;
+			background-color: #ffffff;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 10px 20px;
+			border: 1px solid #ffffff;
+		}
+		select{
+			height: 45px;
+			padding: 5px 20px;
+		}
+		input[type="submit"]{
+			text-align: center;
+			color: #ffffff;
+			background: @main-color;
+			border-color: @main-color;
+			&:hover, &:focus{
+				background: darken(@main-color, 10);
+				border-color: darken(@main-color, 10);
+			}
+		}
+		@media(max-width: @screen-sm - 1){
+			.bt-row-1 .bt-col, .bt-row-2 .bt-col{
+			width: 100%;
+			&:first-child{
+				width: 100%;
+			}
+			&:last-child{
+				width: 100%;
+			}
+		}
+		}
+	}
+}
+
+.bt-branches-section{
+	.vc_row{
+		max-width: 1500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.bt-contact-form-section{
+	.wpcf7-form{
+		max-width: 770px;
+		margin: 0 auto 30px;
+		.wpcf7-form-control-wrap{
+			display: block;
+			margin-bottom: 30px;
+		}
+		input, select, textarea{
+			font-size: 20px;
+			line-height: 24px;
+			color: #444444;
+			background-color: #ffffff;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 10px 20px;
+			border: 1px solid #ffffff;
+		}
+		select{
+			height: 45px;
+			padding: 5px 20px;
+		}
+		textarea{
+			height: 230px;
+		}
+		input[type="submit"]{
+			font-size: 26px;
+			line-height: 28px;
+			color: #ffffff;
+			background: #000000;
+			width: auto;
+			padding: 12px 35px;
+			border: none;
+			&:hover{
+				color: @main-color;
+				background: #ffffff;
+			}
+		}
+	}
+}
