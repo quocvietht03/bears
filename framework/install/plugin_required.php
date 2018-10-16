@@ -55,7 +55,7 @@ function bears_register_required_plugins() {
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
-	$root = 'http://theme.bearsthemes.com/plugin_install/';
+	$root = 'http://bearsthemespremium.com/install/plugin/';
 	
 	$plugins = array(
 		array(
@@ -76,7 +76,7 @@ function bears_register_required_plugins() {
 		array(
 			'name'         => esc_html__('WPBakery Page Builder', 'bears'),
 			'slug'         => 'js_composer',
-			'source'       => $root.'visual-composer.zip',
+			'source'       => $root.'js_composer.zip',
 			'required'     => true,
 		),
 		array(

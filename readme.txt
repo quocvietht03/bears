@@ -1,6 +1,6 @@
 === bears ===
 Theme Name: Bears
-Theme URI: http://theme.bearsthemes.com/wordpress/bears
+Theme URI: http://bearsthemespremium.com/theme/bears
 Author: bearsthemes
 Author URI: http://bearsthemes.com
 License: GNU General Public License v2 or later
@@ -18,6 +18,12 @@ Text Domain: bears
 5. Navigate to Appearance > Theme Options in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.2 =
+* Released: October 8, 2018
+	- Support Ultimate GDPR.
+	- Update VC field layout.
+	- Update Small issue.
 
 = 1.1 =
 * Released: July 27, 2018
