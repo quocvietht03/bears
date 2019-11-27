@@ -3,72 +3,72 @@ function bears_fw_ext_backups_demos($demos) {
     $demos_array = array(
 		'company' => array(
 			'title' => esc_html__('Company', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/company/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-company/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/company/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/company/',
 		),
 		'lawfirm' => array(
 			'title' => esc_html__('Lawfirm', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/lawfirm/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-lawfirm/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/lawfirm/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/lawfirm/',
 		),
 		'construction' => array(
 			'title' => esc_html__('Construction', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/construction/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-construction/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/construction/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/construction/',
 		),
 		'dentist' => array(
 			'title' => esc_html__('Dentist', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/dentist/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-dentist/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/dentist/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/dentist/',
 		),
 		'legal' => array(
 			'title' => esc_html__('Legal', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/legal/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-legal/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/legal/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/legal/',
 		),
 		'marketing' => array(
 			'title' => esc_html__('Marketing', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/marketing/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-marketing/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/marketing/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/marketing/',
 		),
 		'consultancy' => array(
 			'title' => esc_html__('Consultancy', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/consultancy/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-consultancy/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/consultancy/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/consultancy/',
 		),
 		'creative' => array(
 			'title' => esc_html__('Creative', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/creative/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-creative/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/creative/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/creative/',
 		),
 		'digital' => array(
 			'title' => esc_html__('Digital', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/digital/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-digital/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/digital/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/digital/',
 		),
 		'advisor' => array(
 			'title' => esc_html__('Advisor', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/advisor/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-advisor/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/advisor/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/advisor/',
 		),
 		'insurance' => array(
 			'title' => esc_html__('Insurance', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/insurance/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-insurance/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/insurance/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/insurance/',
 		),
 		'serviceit' => array(
 			'title' => esc_html__('Service IT', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/serviceit/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-serviceit/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/serviceit/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/serviceit/',
 		),
 		'arabic' => array(
 			'title' => esc_html__('Arabic', 'bears'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/bears/arabic/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/bears-arabic/ar/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/bears/arabic/screenshot.jpg',
+			'preview_link' => 'http://bears.beplusthemes.com/arabic/ar/',
 		),
     );
 
-    $download_url = 'http://bearsthemespremium.com/install/demo/bears/';
+    $download_url = 'http://beplusthemes.com/install/demo/bears/';
 
     foreach ($demos_array as $id => $data) {
         $demo = new FW_Ext_Backups_Demo($id, 'piecemeal', array(
