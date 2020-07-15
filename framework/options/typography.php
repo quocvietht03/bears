@@ -13,7 +13,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory().'/framework/options/fonts.css',
+			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
 			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#444444',
@@ -33,7 +33,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory().'/framework/options/fonts.css',
+			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
 			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#333333',
@@ -68,7 +68,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory().'/framework/options/fonts.css',
+			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
 			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#333333',
@@ -103,7 +103,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory().'/framework/options/fonts.css',
+			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
 			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#333333',
@@ -138,7 +138,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory().'/framework/options/fonts.css',
+			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
 			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#333333',
@@ -173,7 +173,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory().'/framework/options/fonts.css',
+			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
 			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#333333',
@@ -208,7 +208,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory().'/framework/options/fonts.css',
+			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
 			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#333333',
@@ -251,7 +251,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory().'/framework/options/fonts.css',
+			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
 			'fonts'  => $fonts, 'google' => false,
 		),
 		array(
@@ -269,7 +269,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory().'/framework/options/fonts.css',
+			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
 			'fonts'  => $fonts, 'google' => false,
 		),
 		array(
@@ -287,7 +287,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory().'/framework/options/fonts.css',
+			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
 			'fonts'  => $fonts, 'google' => false,
 		),
 		array(
