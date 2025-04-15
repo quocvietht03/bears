@@ -10,30 +10,65 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     3.4.0
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 9.4.0
+ *
+ * @var bool   $readonly If the input should be set to readonly mode.
+ * @var string $type     The input type attribute.
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
-if ( $max_value && $min_value === $max_value ) {
-	?>
-	<div class="quantity hidden">
-		<span class="qty-minus"><i class="fa fa-minus"></i></span>
-		<input type="hidden" id="<?php echo esc_attr( $input_id ); ?>" class="qty" name="<?php echo esc_attr( $input_name ); ?>" value="<?php echo esc_attr( $min_value ); ?>" />
-		<span class="qty-plus"><i class="fa fa-plus"></i></span>
-	</div>
+/* translators: %s: Quantity. */
+$label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 'bears' ), wp_strip_all_tags( $args['product_name'] ) ) : esc_html__( 'Quantity', 'bears' );
+
+?>
+<div class="quantity">
 	<?php
-} else {
+	/**
+	 * Hook to output something before the quantity input field.
+	 *
+	 * @since 7.2.0
+	 */
+	do_action( 'woocommerce_before_quantity_input_field' );
 	?>
-	<div class="quantity">
-		<span class="qty-minus"><i class="fa fa-minus"></i></span>
-		<input type="number" id="<?php echo esc_attr( $input_id ); ?>" class="input-text qty text" step="<?php echo esc_attr( $step ); ?>" min="<?php echo esc_attr( $min_value ); ?>" max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>" name="<?php echo esc_attr( $input_name ); ?>" value="<?php echo esc_attr( $input_value ); ?>" title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'bears' ) ?>" size="4" pattern="<?php echo esc_attr( $pattern ); ?>" inputmode="<?php echo esc_attr( $inputmode ); ?>" />
-		<span class="qty-plus"><i class="fa fa-plus"></i></span>
-	</div>
+	<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
+	<span class="qty-minus">
+		<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+			<path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/>
+		</svg>
+	</span>
+	<input
+		type="<?php echo esc_attr( $type ); ?>"
+		<?php if($readonly) echo 'readonly="readonly"'; ?>
+		id="<?php echo esc_attr( $input_id ); ?>"
+		class="<?php echo esc_attr( join( ' ', (array) $classes ) ); ?>"
+		name="<?php echo esc_attr( $input_name ); ?>"
+		value="<?php echo esc_attr( $input_value ); ?>"
+		aria-label="<?php esc_attr_e( 'Product quantity', 'bears' ); ?>"
+		size="4"
+		min="<?php echo esc_attr( $min_value ); ?>"
+		max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>"
+		<?php if ( ! $readonly ) : ?>
+			step="<?php echo esc_attr( $step ); ?>"
+			placeholder="<?php echo esc_attr( $placeholder ); ?>"
+			inputmode="<?php echo esc_attr( $inputmode ); ?>"
+			autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
+		<?php endif; ?>
+	/>
+	<span class="qty-plus">
+		<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+			<path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+		</svg>
+	</span>
 	<?php
-}
+	/**
+	 * Hook to output something after quantity input field
+	 *
+	 * @since 3.6.0
+	 */
+	do_action( 'woocommerce_after_quantity_input_field' );
+	?>
+</div>
+<?php

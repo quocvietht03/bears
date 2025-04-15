@@ -10,60 +10,36 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
+ * @see         https://docs.woocommerce.com/document/template-structure/
+ * @package     WooCommerce\Templates
  * @version     1.6.4
  */
-global $bears_options;
-$fullwidth = isset($bears_options['product_fullwidth'])&&$bears_options['product_fullwidth'] ? 'fullwidth': 'container';
-$sidebar_width = (int) isset($bears_options['product_sidebar_width']) ?  $bears_options['product_sidebar_width']: 3;
 
-$sidebar_position = function_exists( 'fw_ext_sidebars_get_current_position' ) ? fw_ext_sidebars_get_current_position() : 'full';
-
-$sidebar_class = 'col-md-'.$sidebar_width;
-if($sidebar_position == 'left' || $sidebar_position == 'right'){
-		$content_width = 12 - $sidebar_width;
-		$content_class = 'col-md-'.$content_width;
-	
-}elseif($sidebar_position == 'left_right'){
-	$content_width = 12 - 2*$sidebar_width;
-	$content_class = 'col-md-'.$content_width;
-}else{
-	$content_class = 'col-md-12';
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
 }
+
+get_header( 'shop' );
+get_template_part( 'framework/templates/site', 'titlebar');
+
 ?>
-<?php get_header( 'shop' ); ?>
-<?php bears_titlebar(); ?>
-
+<main id="bt_main" class="bt-site-main">
 	<div class="bt-main-content">
-		<div class="<?php echo esc_attr($fullwidth); ?>">
-			<div class="row">
-				<!-- Start Left Sidebar -->
-				<?php if($sidebar_position == 'left' || $sidebar_position == 'left_right'){ ?>
-					<div class="bt-sidebar bt-left-sidebar <?php echo esc_attr($sidebar_class); ?>">
-						<?php echo get_sidebar('left'); ?>
-					</div>
-				<?php } ?>
-				<!-- End Left Sidebar -->
-				<!-- Start Content -->
-				<div class="bt-content <?php echo esc_attr($content_class); ?>">
-					<?php while ( have_posts() ) : the_post(); ?>
+		<div class="bt-main-product-ss">
+			<div class="bt-container">
+				<?php while ( have_posts() ) : ?>
+					<?php the_post(); ?>
 
-						<?php wc_get_template_part( 'content', 'single-product' ); ?>
+					<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-					<?php endwhile; // end of the loop. ?>
-				</div>
-				<!-- End Content -->
-				<!-- Start Right Sidebar -->
-				<?php if($sidebar_position == 'right' || $sidebar_position == 'left_right'){ ?>
-					<div class="bt-sidebar bt-right-sidebar <?php echo esc_attr($sidebar_class); ?>">
-						<?php echo get_sidebar('right'); ?>
-					</div>
-				<?php } ?>
-				<!-- End Right Sidebar -->
+				<?php endwhile; // end of the loop. ?>
 			</div>
 		</div>
-	</div>
 
-<?php get_footer( 'shop' );
+		<?php get_template_part( 'framework/templates/social', 'media-channels'); ?>
+	</div>
+</main>
+<?php
+get_footer( 'shop' );
+
+/* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

@@ -1,69 +1,32 @@
-<?php get_header(); ?>
 <?php
-global $bears_options;
-$page_comment = (int) isset($bears_options['page_comment']) ?  $bears_options['page_comment']: 1;
-$sidebar_width = (int) isset($bears_options['sidebar_width']) ?  $bears_options['sidebar_width']: 3;
+get_header();
+get_template_part( 'framework/templates/site', 'titlebar');
 
-$page_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
-$page_titlebar = isset($page_options['page_titlebar'])&&$page_options['page_titlebar']?$page_options['page_titlebar']:'';
-
-$sidebar_position = function_exists( 'fw_ext_sidebars_get_current_position' ) ? fw_ext_sidebars_get_current_position() : 'full';
-
-$sidebar_class = 'col-md-'.$sidebar_width;
-if($sidebar_position == 'left' || $sidebar_position == 'right'){
-		$content_width = 12 - $sidebar_width;
-		$content_class = 'col-md-'.$content_width;
-	
-}elseif($sidebar_position == 'left_right'){
-	$content_width = 12 - 2*$sidebar_width;
-	$content_class = 'col-md-'.$content_width;
-}else{
-	$content_class = 'col-md-12';
-}
-
-if(!$page_titlebar){
-	bears_titlebar();
-}
 ?>
-	<div class="bt-main-content">
-		<div class="container">
-			<div class="row">
-				<!-- Start Left Sidebar -->
-				<?php if($sidebar_position == 'left' || $sidebar_position == 'left_right'){ ?>
-					<div class="bt-sidebar bt-left-sidebar <?php echo esc_attr($sidebar_class); ?>">
-						<?php echo get_sidebar('left'); ?>
-					</div>
-				<?php } ?>
-				<!-- End Left Sidebar -->
-				<!-- Start Content -->
-				<div class="bt-content <?php echo esc_attr($content_class); ?>">
-					<?php while ( have_posts() ) : the_post(); ?>
-
-						<?php 
-							the_content(); 
+<main id="bt_main" class="bt-site-main">
+	<div class="bt-main-content-ss">
+		<div class="bt-container">
+			<!-- Start Content -->
+			<div class="bt-page">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="bt-page--content">
+						<?php
+							the_content();
 							wp_link_pages(array(
 								'before' => '<div class="page-links">' . esc_html__('Pages:', 'bears'),
 								'after' => '</div>',
 							));
 						?>
-						
-						<?php if($page_comment){ ?>
-							
-								<?php if ( comments_open() || get_comments_number() ) comments_template(); ?>
-							
-						<?php } ?>
-
-					<?php endwhile; ?>
-				</div>
-				<!-- End Content -->
-				<!-- Start Right Sidebar -->
-				<?php if($sidebar_position == 'right' || $sidebar_position == 'left_right'){ ?>
-					<div class="bt-sidebar bt-right-sidebar <?php echo esc_attr($sidebar_class); ?>">
-						<?php echo get_sidebar('right'); ?>
 					</div>
-				<?php } ?>
-				<!-- End Right Sidebar -->
+					<?php if ( comments_open() || get_comments_number() ) comments_template(); ?>
+
+				<?php endwhile; ?>
 			</div>
+			<!-- End Content -->
 		</div>
 	</div>
+
+	<?php get_template_part( 'framework/templates/social', 'media-channels'); ?>
+</main><!-- #main -->
+
 <?php get_footer(); ?>
