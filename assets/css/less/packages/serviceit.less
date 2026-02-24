@@ -1,0 +1,242 @@
+.bt-button-element-style1{
+	.bt-button-element > a{
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		color: #ffffff;
+		background: @main-color;
+		padding: 12px 30px;
+		-webkit-box-shadow: 5px 0 35px fadeout(#000000, 91);
+		-ms-box-shadow: 5px 0 35px fadeout(#000000, 91);
+		box-shadow: 5px 0 35px fadeout(#000000, 91);
+		&:hover{
+			background: darken(@main-color, 10);
+		}
+	}
+}
+
+.ubtn-sep-icon.ubtn-sep-icon-at-right{
+	white-space: nowrap;
+	.ubtn-icon{
+		position: relative;
+		float: right;
+		line-height: 24px;
+		top: 0;
+		right: 0 !important;
+		margin-left: 5px;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	.ubtn-text{
+		display: inline-block;
+	}
+}
+
+.bt-video-popup-box{
+	position: relative;
+	.bt-btn-video-popup{
+		.ab-center;
+		width: 90px;
+		height: 90px;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		-webkit-box-shadow: 5px 0 35px fadeout(#000000, 91);
+		-ms-box-shadow: 5px 0 35px fadeout(#000000, 91);
+		box-shadow: 5px 0 35px fadeout(#000000, 91);
+		&:hover{
+			opacity: 0.85;
+		}
+	}
+}
+
+.bt-intro-section{
+	> .vc_row{
+		max-width: 845px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.bt-services-section{
+	.wpb-js-composer &{
+		.vc_tta.vc_general{
+			background: #ffffff;
+			.vc_tta-tabs-container {
+				padding: 60px;
+				.vc_tta-tabs-list .vc_tta-tab{
+					> a{
+						font-size: 18px;
+						font-weight: 700;
+						line-height: 24px;
+						color: #333333; 
+						background: #ffffff;
+						padding: 15px 20px;
+						border: none;
+						-webkit-border-radius: 0;
+						border-radius: 0;
+					}
+					&.vc_active > a{
+						color: @main-color;
+					}
+				}
+			}
+			.vc_tta-panels-container .vc_tta-panels{
+				background: #ffffff;
+				border: none;
+				-webkit-border-radius: 0;
+				border-radius: 0;
+				.vc_tta-panel-body{
+					padding: 0;
+					-webkit-border-radius: 0;
+					border-radius: 0;
+					@media(max-width: @screen-sm - 1){
+						padding: 15px;
+						.ubtn-link{
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.bt-services-section2{
+	.bt-services-grid-element.layout8 .row > div:nth-child(2n){
+		.bt-item{
+			.bt-media{
+				left: auto;
+				right: 0;
+			}
+			.bt-content{
+				float: left;
+			}
+		}
+	}
+}
+
+.bt-support-section{
+	> .vc_row{
+		max-width: 1536px;
+		margin-left: auto;
+		margin-right: auto;
+		-webkit-box-shadow: 5px 0 35px fadeout(#000000, 91);
+		-ms-box-shadow: 5px 0 35px fadeout(#000000, 91);
+		box-shadow: 5px 0 35px fadeout(#000000, 91);
+	}
+	.aio-icon-component{
+		text-align: center;
+		.aio-icon-box{
+			display: inline-block;
+		}
+	}
+	@media(max-width: @screen-md - 1){
+		.vc_custom_heading br{
+			display: none;
+		}
+	}
+	@media(max-width: @screen-sm - 1){
+		.aio-icon-box {
+			.aio-icon-default, .aio-icon-header{
+				display: block;
+			}
+			.aio-icon-title{
+				font-size: 36px !important;
+				line-height: 42px !important;
+			}
+		}
+	}
+}
+
+.bt-project-section{
+	> .vc_row{
+		max-width: 1536px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.bt-paralax-section{
+	h3.vc_custom_heading{
+		font-size: 40px !important;
+		line-height: 45px !important;
+	}
+}
+
+.bt-branches-section{
+	.bt-client-grid-element{
+		text-align: center;
+		margin-left: -15px;
+		margin-right: -15px;
+		.bt-item{
+			float: none;
+			display: inline-block;
+			padding: 15px;
+			img{
+				max-width: 100%;
+				height: auto;
+				-webkit-box-shadow: 5px 0 32px fadeout(#000000, 89);
+				-ms-box-shadow: 5px 0 32px fadeout(#000000, 89);
+				box-shadow: 5px 0 32px fadeout(#000000, 89);
+			}
+		}
+	}
+	@media(max-width: @screen-md - 1){
+		.uvc-heading br{
+			display: none;
+		}
+	}
+	@media(max-width: 560px){
+		.bt-client-grid-element .bt-item.col-4{
+			width: 33.33%;
+		}
+	}
+	@media(max-width: 380px){
+		.bt-client-grid-element .bt-item.col-4{
+			width: 50%;
+		}
+	}
+}
+
+.bt-contact-us-section{
+	.aio-icon-header h3.aio-icon-title, .aio-icon-description{
+		letter-spacing: -1.2px;
+	}
+	.aio-icon-header + .aio-icon-description{
+		margin-top: 5px;
+	}
+	.wpcf7-form .row > div {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	input, select, textarea{
+		font-size: 15px;
+		line-height: 24px;
+		background-color: #fafafa;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	select{
+		height: 46px;
+	}
+	textarea{
+		max-height: 180px;
+	}
+	input[type="submit"]{
+		font-size: 15px;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: #ffffff;
+		background: @main-color;
+		width: auto;
+		margin-top: 15px;
+		margin-bottom: 30;
+		padding: 10px 30px;
+		border: none;
+		&:hover, &:focus{
+			color: #ffffff;
+			background: darken(@main-color, 10);
+		}
+	}
+}

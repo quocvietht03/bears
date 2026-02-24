@@ -1,5 +1,5 @@
-		<?php get_template_part( 'framework/templates/site', 'footer'); ?>
-	</div><!-- #page -->
+		<?php bears_Footer(); ?>
+	</div><!-- #wrap -->
 	<?php wp_footer(); ?>
 </body>
 </html>

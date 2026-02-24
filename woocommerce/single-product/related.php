@@ -10,70 +10,40 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see         https://docs.woocommerce.com/document/template-structure/
- * @package     WooCommerce\Templates
- * @version     3.9.0
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
+ * @author 		WooThemes
+ * @package 	WooCommerce/Templates
+ * @version     3.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+if ( $related_products ) : ?>
 
-if ( $related_products ) :
+	<section class="related">
 
-	if(function_exists('get_field')){
-		$related_posts = get_field('product_related_posts', 'options');
-	} else {
-		$related_posts = array(
-			'sub_heading' => __( 'Style Change Your Life', 'bears' ),
-			'heading' => __( 'Related Products', 'bears' ),
-			'text_heading' => ''
-		);
-	}
+		<h2><?php esc_html_e( 'Related products', 'bears' ); ?></h2>
 
-?>
-
-	<section class="related products">
-
-		<div class="bt-related-heading">
-			<?php
-				if(!empty($related_posts['sub_heading'])) {
-					echo '<div class="bt-sub-text">' . $related_posts['sub_heading'] . '</div>';
-				}
-
-				if(!empty($related_posts['heading'])) {
-					echo '<h2 class="bt-main-text">' . $related_posts['heading'] . '</h2>';
-				}
-
-				if(!empty($related_posts['text_heading'])) {
-					echo '<div class="bt-head-text">' . $related_posts['text_heading'] . '</div>';
-				}
-			?>
-		</div>
-
-		<?php woocommerce_product_loop_start(); ?>
+		<div class="row products">
 
 			<?php foreach ( $related_products as $related_product ) : ?>
+			
+				<div class="col-sm-6 col-md-3" style="margin-bottom: 30px;">
 
-					<?php
-					$post_object = get_post( $related_product->get_id() );
+				<?php
+				 	$post_object = get_post( $related_product->get_id() );
 
-					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+					setup_postdata( $GLOBALS['post'] =& $post_object );
 
-					wc_get_template_part( 'content', 'product' );
-					?>
+					wc_get_template_part( 'content', 'product' ); 
+				?>
+				
+				</div>
 
 			<?php endforeach; ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+		</div>
 
-		<?php
-			if(!empty($related_posts['bottom_text'])) {
-				echo '<div class="bt-related-bottom-text">' . $related_posts['bottom_text'] . '</div>';
-			}
-		?>
 	</section>
-	<?php
-endif;
+
+<?php endif;
 
 wp_reset_postdata();

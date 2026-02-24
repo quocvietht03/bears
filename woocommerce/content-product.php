@@ -11,44 +11,42 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates
- * @version 9.4.0
+ * @author  WooThemes
+ * @package WooCommerce/Templates
+ * @version 3.4.0
  */
-
-defined( 'ABSPATH' ) || exit;
 
 global $product;
 
-// Ensure visibility.
+// Ensure visibility
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div <?php wc_product_class( 'woocommerce-loop-product', $product ); ?>>
-	<div class="woocommerce-loop-product__thumbnail">
-		<div class="wc-cover-image">
-			<?php
-				do_action('bears_woocommerce_template_loop_product_link_open');
-				do_action('bears_woocommerce_template_loop_product_thumbnail');
-				do_action('bears_woocommerce_template_loop_product_link_close');
-			?>
-		</div>
-		<?php
-			do_action('bears_woocommerce_show_product_loop_sale_flash');
-			do_action('bears_woocommerce_template_loop_add_to_cart');
-		?>
-	</div>
-	<div class="woocommerce-loop-product__infor">
-		<?php
-			do_action('bears_woocommerce_shop_loop_item_subtitle');
-			do_action('bears_woocommerce_template_loop_rating');
-			do_action('bears_woocommerce_template_loop_product_link_open');
-			do_action('bears_woocommerce_template_loop_product_title');
-			do_action('bears_woocommerce_template_loop_product_link_close');
-			do_action('bears_woocommerce_template_loop_price');
-		?>
-	</div>
-	<?php
 
-	?>
-</div>
+<article <?php post_class(); ?>>
+	<div class="thumb">
+		<?php
+			do_action('woocommerce_template_loop_product_link_open');
+			do_action('woocommerce_show_product_loop_sale_flash');
+			do_action('woocommerce_template_loop_product_thumbnail');
+			do_action('woocommerce_template_loop_product_link_close');
+		?>
+		<div class="overlay">
+			<div class="inner">
+				<?php
+					do_action('woocommerce_template_loop_add_to_cart');
+				?>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<?php
+			do_action('woocommerce_template_loop_product_link_open');
+			do_action('woocommerce_template_loop_product_title');
+			do_action('woocommerce_template_loop_product_link_close');
+			do_action('woocommerce_template_loop_price');
+			do_action('woocommerce_template_loop_rating');
+		?>
+	</div>
+</article>

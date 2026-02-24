@@ -7,6 +7,6 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class() ?>>
-	<?php wp_body_open(); ?>
-	<div class="bt-site">
-		<?php get_template_part( 'framework/templates/site', 'header'); ?>
+	<?php do_action('bears_add_content_before_header'); ?>
+	<div id="bt-main">
+		<?php bears_Header(); ?>

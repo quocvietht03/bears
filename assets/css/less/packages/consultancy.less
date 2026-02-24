@@ -1,0 +1,115 @@
+.bt-button-element-style1{
+	.bt-button-element > a{
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 24px;
+		text-transform: uppercase;
+		color: #ffffff;
+		background: @main-color;
+		padding: 8px 30px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		-webkit-box-shadow: 5px 0 32px fadeout(#000000, 89);
+		-ms-box-shadow: 5px 0 32px fadeout(#000000, 89);
+		box-shadow: 5px 0 32px fadeout(#000000, 89);
+		&:hover{
+			background: darken(@main-color, 10);
+		}
+	}
+}
+
+.bt-features-section{
+	> .vc_row{
+		max-width: 1320px;
+		margin-left: auto;
+		margin-right: auto;
+		-webkit-box-shadow: 5px 0 32px fadeout(#000000, 89);
+		-ms-box-shadow: 5px 0 32px fadeout(#000000, 89);
+		box-shadow: 5px 0 32px fadeout(#000000, 89);
+	}
+	a.ubtn-link{
+		padding: 0;
+	}
+	button.ubtn-normal{
+		padding: 0 30px 0 0;
+		.ubtn-icon{
+			right: 0;
+		}
+		
+	}
+}
+
+.bt-services-section{
+	.aio-icon-header + .aio-icon-description{
+		margin-top: 5px;
+	}
+}
+
+.bt-branches-section{
+	.bt-client-grid-element{
+		text-align: center;
+		margin-left: -15px;
+		margin-right: -15px;
+		.bt-item{
+			float: none;
+			display: inline-block;
+			padding: 15px;
+			img{
+				max-width: 100%;
+				height: auto;
+				-webkit-box-shadow: 5px 0 32px fadeout(#000000, 89);
+				-ms-box-shadow: 5px 0 32px fadeout(#000000, 89);
+				box-shadow: 5px 0 32px fadeout(#000000, 89);
+			}
+		}
+	}
+	@media(max-width: 560px){
+		.bt-client-grid-element .bt-item.col-4{
+			width: 33.33%;
+		}
+	}
+	@media(max-width: 380px){
+		.bt-client-grid-element .bt-item.col-4{
+			width: 50%;
+		}
+	}
+}
+
+.bt-contact-section .wpcf7-form{
+	.row > div {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	input, select, textarea{
+		font-size: 15px;
+		font-style: italic;
+		line-height: 24px;
+		background-color: #fafafa;
+		width: 100%;
+		margin-bottom: 10px;
+		border-color: #fafafa;
+	}
+	select{
+		height: 46px;
+	}
+	textarea{
+		max-height: 180px;
+	}
+	input[type="submit"]{
+		font-size: 13px;
+		font-weight: 700;
+		font-style: normal;
+		text-transform: uppercase;
+		color: #ffffff;
+		background: @main-color;
+		width: auto;
+		margin-top: 15px;
+		margin-bottom: 30px;
+		padding: 10px 30px;
+		border: none;
+		&:hover, &:focus{
+			color: #ffffff;
+			background: darken(@main-color, 10);
+		}
+	}
+}
